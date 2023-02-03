@@ -11,7 +11,7 @@ header {
     top: 0; left: 0; right: 0;
     background: #fff;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
-    padding: 0px 7%;
+    padding: 0px 13%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -23,6 +23,7 @@ header .logo {
     font-size: 25px;
     color: #333;
 }
+
 /* 메뉴 타이틀 */
 header .navbar ul {
     list-style: none;
@@ -31,15 +32,17 @@ header .navbar ul li {
     position: relative;
     float: left;
 }
-header .navbar ul li a {
+/* menu */
+header .navbar ul li a{
     font-size: 18px;
     padding: 18px;
     color: #333;
     display: block;
 }
 header .navbar ul li a:hover {
-    background: #f0f0f0
+    color: rgb(255, 154, 21);
 }
+/* title */
 header .navbar ul li ul {
     position: absolute;
     left: 0;
@@ -50,6 +53,15 @@ header .navbar ul li ul {
 header .navbar ul li ul li {
     width: 100%;
     border-top: 1px solid rgba(0, 0, 0, .1);
+}
+header .navbar ul li ul li a {
+    font-size: 0.95rem;
+  padding: 0.5rem 0.875rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+header .navbar ul li ul li a:hover {
+    background: #f0f0f0;
 }
 header .navbar ul li ul li ul {
     left: 200px;
@@ -80,6 +92,7 @@ header label {
     } 
     header label {
         display: initial;
+        font-size: 2rem;
     }
 
     header .navbar {
@@ -92,17 +105,34 @@ header label {
     header .navbar ul li {
         width: 100%;
     }
+    header .navbar ul li a {
+        padding: 1rem 6rem;
+    }
     header .navbar ul li ul {
         position: relative;
         width: 100%;
+
+        text-align: left;
+    }
+    header .navbar ul li ul li a {
+        padding: 0.5rem 0 0.5rem 3rem;
     }
 
     header .navbar ul li ul li {
-        background: #eee;
+        background: #f9f9f9;
     }
+    /* title */
     header .navbar ul li ul li ul {
         width: 100%;
         left: 0;
+    }
+    header .navbar ul li ul li ul a {
+        background: #dedede;
+        padding: 0.5rem 0 0.5rem 6rem;
+    }
+    header .navbar ul li ul li ul a:hover {
+        background: #8a8a8a;
+        color: #fff;
     }
 
     #menu-bar:checked ~ .navbar {
